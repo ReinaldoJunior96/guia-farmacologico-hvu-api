@@ -16,3 +16,13 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
+
+
+$router->group(['prefix'=>'farmacos'], function () use($router){
+    $router->get('/', function () use($router){
+        return "retorna todos os fármacos";
+    });
+    $router->get('/{id}', function() use($router){
+        return "retorna apenas um farmaco";
+    });
+});
