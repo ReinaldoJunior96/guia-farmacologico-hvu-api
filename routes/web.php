@@ -19,10 +19,6 @@ $router->get('/', function () use ($router) {
 
 
 $router->group(['prefix'=>'farmacos'], function () use($router){
-    $router->get('/', function () use($router){
-        return "retorna todos os fármacos";
-    });
-    $router->get('/{id}', function() use($router){
-        return "retorna apenas um farmaco";
-    });
+    $router->get('/', 'FarmacoController@index');
+    $router->get('/{farmaco}', 'FarmacoController@show');
 });
