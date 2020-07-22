@@ -9,8 +9,11 @@ use Illuminate\Database\Eloquent\Model;
 use Laravel\Lumen\Auth\Authorizable;
 
 class Farmaco extends Model{
+
+    /*Ignora o campos de data*/
     public $timestamps = false;
-    //protected $fillable = [];
+    /*Por enquanto aceita todos os dados inseridos*/
     protected $guarded = [];
+    /*Indica que esse model pertence a esta tabela*/
     protected $table = 'tbl_farmacos';
 }
