@@ -43,7 +43,11 @@ class RecomendacaoController extends Controller
     public function delete($rec)
     {
         try{
-
+            $recDelete = Farmaco::find($rec);
+            $recDelete->delete();
+            return response()->json(['data'=>'delete success!!']);
+        }catch (QueryException $e){
+            return response()->json(['data'=>'delete fail!!']);
         }
     }
 
