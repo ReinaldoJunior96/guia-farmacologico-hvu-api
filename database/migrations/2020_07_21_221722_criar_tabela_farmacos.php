@@ -20,9 +20,9 @@ class CriarTabelaFarmacos extends Migration
             $table->string("grupo_farmacologico");
             $table->text("descricao");
             $table->string("uso_clinico");
-            $table->string("indicacao");
-            $table->string("contraindicacao");
-            $table->string("efeito_adverso");
+            $table->text("indicacao");
+            $table->text("contraindicacao");
+            $table->text("efeito_adverso");
         });
     }
 
@@ -33,6 +33,6 @@ class CriarTabelaFarmacos extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('farmacos');
+        Schema::dropIfExists('tbl_farmacos');
     }
 }

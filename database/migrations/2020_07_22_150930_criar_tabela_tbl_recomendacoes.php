@@ -15,13 +15,17 @@ class CriarTabelaTblRecomendacoes extends Migration
     {
         Schema::create('tbl_recomendacoes', function (Blueprint $table) {
             $table->id();
-            $table->
+            $table->bigInteger("id_farmaco")->unsigned();
             $table->string("canino");
             $table->string("felino");
             $table->string("equino");
             $table->string("bovino");
             $table->string("caprino");
             $table->string("suino");
+            $table->foreign("id_farmaco")
+                    ->references('id')
+                    ->on('tbl_farmacos')
+                    ->onDelete('cascade');
         });
     }
 
