@@ -16,12 +16,12 @@ class CriarTableDoses extends Migration
         Schema::create('tbl_doses', function (Blueprint $table) {
             $table->id();
             $table->bigInteger('id_farmaco')->unsigned();
-            $table->string("canino");
-            $table->string("felino");
-            $table->string("equino");
-            $table->string("bovino");
-            $table->string("caprino");
-            $table->string("suino");
+            $table->string("canino")->nullable();
+            $table->string("felino")->nullable();
+            $table->string("equino")->nullable();
+            $table->string("bovino")->nullable();
+            $table->string("caprino")->nullable();
+            $table->string("suino")->nullable();
             $table->foreign('id_farmaco')
                     ->references('id')
                     ->on('tbl_farmacos')

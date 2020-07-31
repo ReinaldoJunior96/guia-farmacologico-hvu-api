@@ -43,12 +43,11 @@ $indicacao = array(
     "Patologias dolorosas ou degenerativas, agudas ou crônicas, do aparelho osteomioarticular: osteítes, artrites, artrites reumatoides, osteoartrites, espondiloses, espondiloartroses anquilosantes, displasias coxo-femurais, calcificação de discos intervertebrais, reparação de fraturas, traumatismos e pós-operatório de artroplastias. Afecções oculares: uveítes, conjuntivites, pós-operatórios. Desordens de ordem reprodutiva como retenção de placenta.Metrites e mastites. Analgesia pré e pós-operatória."
 );
 $contraindicacao = array(
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-    NULL,
-
+    " ",
+    " ",
+    " ",
+    " ",
+    " ",
 );
 $efeitoAdverso = array(
     "Hipotensão, colapso circulatório, agressividade paradoxal e, em equideos, protrusão do pênis, taquipneia, taquicardia e convulsões.",
@@ -65,18 +64,30 @@ function storeFarmaco($nomeComercial, $principioAtivo, $grupoFarmacologico, $des
                       $indicacao, $contraindicacao, $efeitoAdverso){
     for($i = 0; $i < count($nomeComercial) ; $i++){
         $farmacos = array(
-            'nomeComercial' => $nomeComercial[$i],
-            'principioAtivo' => $principioAtivo[$i],
-            'grupoFarmacologico' => $grupoFarmacologico[$i],
+            'nome_comercial' => $nomeComercial[$i],
+            'principio_ativo' => $principioAtivo[$i],
+            'grupo_farmacologico' => $grupoFarmacologico[$i],
             'descricao' => $descricao[$i],
-            'usoClinico' => $usoClinico[$i],
+            'uso_clinico' => $usoClinico[$i],
             'indicacao' => $indicacao[$i],
             'contraindicacao' => $contraindicacao[$i],
-            'efeitoAdverso' => $efeitoAdverso[$i],
+            'efeito_adverso' => $efeitoAdverso[$i],
         );
-        echo "<pre>";
-        print_r($farmacos);
-        echo "</pre>";
+        /*$dados_json = json_encode($farmacos);
+        $url       = 'http://localhost:8000/farmacos';
+        $cabecalho = array('Content-Type: application/json', 'Accept: application/json');
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL,            $url);
+        curl_setopt($ch, CURLOPT_HTTPHEADER,     $cabecalho);
+        curl_setopt($ch, CURLOPT_POSTFIELDS,     $dados_json);
+        curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_POST,           true);
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST,  'POST');
+        $resposta = curl_exec($ch);
+        curl_close($ch);
+        print_r($resposta);*/
     }
 }
 
