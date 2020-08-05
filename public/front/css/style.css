@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap');
+
+/* Cores */
+
+.cor1 {
+    background-color: #6E83B7;
+}
+
+.cor2 {
+    background-color: #FFB0AA;
+}
+
+.degrade {
+    background: linear-gradient(to right, #6E83B7, #FFB0AA);
+}
+
+.buttom-color1:hover {
+    background-color: #606e91;
+}
+
+.buttom-color2:hover {
+    background-color: #f0a6a1;
+}
+
+.text-color-1 {
+    color: #6E83B7;
+}
+
+.text-color-icon {
+    color: #6E83B7;
+}
+
+
+/* Fonts */
+
+r {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.yanone-kaffeesatz {
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+
+/* Tamanho Fonts */
+
+.font-button {
+    font-size: 20px;
+}
+
+
+/* Margin */
+
+.margin-box-perso {
+    margin-top: 10%;
+}

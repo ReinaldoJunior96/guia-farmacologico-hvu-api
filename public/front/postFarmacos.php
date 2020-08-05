@@ -1,5 +1,5 @@
 <?php
-
+/*
 $nomeComercial = array(
     "ACEPRAN 0,2%",
     "Afectrim",
@@ -88,9 +88,128 @@ function storeFarmaco($nomeComercial, $principioAtivo, $grupoFarmacologico, $des
         $resposta = curl_exec($ch);
         curl_close($ch);
         print_r($resposta);*/
-    }
-}
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-storeFarmaco($nomeComercial, $principioAtivo, $grupoFarmacologico, $descricao, $usoClinico,
-    $indicacao, $contraindicacao, $efeitoAdverso);
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+          integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <title>Olá, mundo!</title>
+    <style>
+        .mont-serrat {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        input {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom-color: #0bd96f;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        a {
+            color: #333333;
+            text-decoration: none !important;
+        }
+
+        a:hover {
+            color: #2b2b2b;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="shadow p-3 mb-5 bg-white rounded mt-5">
+        <div class="row">
+            <div class="col-6 d-flex align-items-center ">
+                <div class="">
+                    <div class="row d-flex justify-content-center">
+                        <h3 class="mont-serrat font-weight-light">Guia Farmacológico</h3>
+                    </div>
+                    <div class="row d-flex justify-content-center">
+                        <img src="images/veterinary.png" class="img-fluid  col-6" alt="Imagem responsiva">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6 mont-serrat">
+                <form>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Nome Comercial</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Princípio Ativo</label>
+                            <input type="text" class="form-control" id="inputPassword4" placeholder="Senha">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Grupo Farmacológico</label>
+                            <input type="text" class="form-control" id="inputEmail4" placeholder="Email">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Efeito Adverso</label>
+                            <input type="text" class="form-control" id="inputPassword4" placeholder="Senha">
+                        </div>
+                    </div>
+                    <!--<div class="form-group">
+                        <label for="exampleFormControlTextarea1">Descrição</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Uso Clínico</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Indicação</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Contraindicação</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>-->
+                    <button type="submit" class="btn btn-primary">Cadastrar</button>
+                    <div class="btn-group mb-3">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
+                            Request
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#">GET</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">POST</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript (Opcional) -->
+<!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
 
