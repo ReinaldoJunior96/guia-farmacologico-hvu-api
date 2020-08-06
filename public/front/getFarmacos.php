@@ -77,16 +77,12 @@ $dados = json_decode($resposta);
                             <td><?= $valores->principio_ativo ?></td>
                             <td><?= $valores->grupo_farmacologico ?></td>
                             <td>
-                                <form action="ShowFarmaco.php" id="mail_form">
-                                    <input type="hidden" name="farmaco" value="<?=$valores->id?>">
-                                    <a href="#" onClick="document.getElementById('mail_form').submit();"><i class="fas fa-eye text-color-icon"></i></a>
-                                </form>
+                                <?php echo "<a href='showFarmaco.php?farmaco=" . $valores->id . "'><i class='fas fa-eye text-color-icon'></i></a>" ?>
                             </td>
                             <td>
                                 <a href=""><i class="fas fa-pen text-color-icon"></i></a>
                             </td>
                         </tr>
-
                     <?php } ?>
                 </tbody>
             </table>

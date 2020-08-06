@@ -1,6 +1,6 @@
 <?php
 /* Cabeçalho */
-$url = 'http://localhost:8000/farmacos';
+$url = 'http://localhost:8000/farmacos/'.$_GET['farmaco'];
 $cabecalho = array('Content-Type: application/json', 'Accept: application/json');
 $ch = curl_init();
 /* Request */
@@ -47,7 +47,6 @@ $dados = json_decode($resposta);
         }
     </style>
 </head>
-
 <body class="degrade">
     <div class="container margin-box-perso">
         <div class="shadow-lg p-3 mb-5 bg-white rounded ">
@@ -57,7 +56,12 @@ $dados = json_decode($resposta);
                     Guia Farmacológico / Show
                 </h3>
             </div>
-            
+            <div class="mt-3">
+                <div class="row">
+                    <h3><?=$dados->nome_comercial?></h3>
+                    <h4><?=$dados->principio_ativo?></h4>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -18,6 +18,8 @@
             <div class="">
                 <img src="images/veterinary.png" width="100" class="rounded mx-auto d-block p-2" alt="">
                 <h2 class="yanone-kaffeesatz text-color-1">Guia Farmacológico</h2>
+                <a href="getFarmacos.php"><button type="button" class="btn cor1 buttom-color1 roboto-condensed text-white font-button col-4">Get <i class="fas fa-cloud-download-alt"></i></button></a>
+                <a href=""><button type="button" class="btn cor2 buttom-color2 roboto-condensed text-white font-button col-4">Post <i class="fas fa-paper-plane"></i></button></a>
             </div>
         </div>
     </div>
